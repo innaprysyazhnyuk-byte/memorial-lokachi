@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Цифровий меморіал пам’яті загиблих військовослужбовців — випускників і працівників ОЗЗСО «Локачинський ліцей».">
+  <title>Пам’ятаємо кожного | Меморіал Локачинського ліцею</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-mark" aria-hidden="true">✦</div>
+    <p class="eyebrow">ЦИФРОВИЙ МЕМОРІАЛ</p>
+    <h1>Пам’ятаємо<br><span>кожного</span></h1>
+    <p class="intro">Пам’яті загиблих Захисників і Захисниць України — випускників та працівників Локачинського ліцею.</p>
+    <a class="primary-link" href="#heroes">Переглянути історії <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main>
+    <section class="dedication">
+      <p class="section-kicker">ПАМ’ЯТЬ ЖИВЕ</p>
+      <h2>За кожним ім’ям — життя, історія та любов.</h2>
+      <p>Цей меморіал створено, щоб зберігати пам’ять про тих, хто навчався або працював у нашому ліцеї та віддав життя за Україну.</p>
+    </section>
+
+    <section id="heroes" class="heroes-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">НАШІ ГЕРОЇ</p>
+          <h2>Історії, які пам’ятаємо</h2>
+        </div>
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+      </div>
+
+      <div class="filters">
+        <label class="search-label" for="search">Пошук за ім’ям або прізвищем
+          <input id="search" type="search" placeholder="Наприклад, Іван Петренко" autocomplete="off">
+        </label>
+        <label for="connection">Зв’язок із ліцеєм
+          <select id="connection">
+            <option value="">Усі</option>
+            <option value="Випускник">Випускники</option>
+            <option value="Працівник">Працівники</option>
+            <option value="Випускник і працівник">Випускники та працівники</option>
+          </select>
+        </label>
+        <label for="year">Рік загибелі
+          <select id="year"><option value="">Усі роки</option></select>
+        </label>
+      </div>
+
+      <div id="heroes-grid" class="heroes-grid"></div>
+      <p id="empty-state" class="empty-state" hidden>За вашим запитом нічого не знайдено. Спробуйте змінити пошук або фільтри.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-symbol" aria-hidden="true">✦</div>
+    <p class="footer-title">Світла пам’ять Героям України</p>
+    <p>ОЗЗСО «Локачинський ліцей»</p>
+    <p class="footer-note">Інформація публікується після перевірки та погодження з родинами.</p>
+  </footer>
+
+  <dialog id="hero-dialog" class="hero-dialog">
+    <button class="close-dialog" id="close-dialog" aria-label="Закрити">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="heroes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
